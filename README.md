@@ -11,7 +11,7 @@ Add this library to your [Composer](https://packagist.org/) configuration. In
 composer.json:
 ```json
   "require": {
-    "marcelog/pagi": "2.*"
+    "kstych/php-agi": "*"
   }
 ```
 
