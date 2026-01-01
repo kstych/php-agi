@@ -1,14 +1,3 @@
-[![License](https://poser.pugx.org/marcelog/PAGI/license)](https://packagist.org/packages/marcelog/PAGI)
-[![Latest Stable Version](https://poser.pugx.org/marcelog/PAGI/v/stable)](https://packagist.org/packages/marcelog/PAGI)
-[![Documentation Status](https://readthedocs.org/projects/pagi/badge/?version=latest)](http://pagi.readthedocs.org/en/latest/?badge=latest)
-
-[![Build Status](https://travis-ci.org/marcelog/PAGI.svg)](https://travis-ci.org/marcelog/PAGI)
-[![Coverage Status](https://coveralls.io/repos/marcelog/PAGI/badge.svg?branch=master&service=github)](https://coveralls.io/github/marcelog/PAGI?branch=master)
-[![Code Climate](https://codeclimate.com/github/marcelog/PAGI/badges/gpa.svg)](https://codeclimate.com/github/marcelog/PAGI)
-[![Issue Count](https://codeclimate.com/github/marcelog/PAGI/badges/issue_count.svg)](https://codeclimate.com/github/marcelog/PAGI)
-
-[![Click here to lend your support to: PAGI and make a donation at pledgie.com !](https://pledgie.com/campaigns/30945.png?skin_name=chrome' border='0')](https://pledgie.com/campaigns/30945)
-
 # Introduction
 
 This framework is intended to simply making ivr applications using Asterisk's
@@ -17,13 +6,6 @@ from a developers' perspective.
 
 # Documentation
 
- * [Main Site](http://marcelog.github.com/PAGI)
- * [API](http://pagi.readthedocs.org/en/latest/ApiIndex/)
- * [Complete PAGI/PAMI talk for the PHP Conference Argentina 2013](http://www.slideshare.net/mgornstein/phpconf-2013). Check the slide notes for the complete text :)
- * [In-depth tutorial](http://marcelog.github.com/articles/pagi_tutorial_create_voip_telephony_application_for_asterisk_with_agi_and_php.html)
- * [An example IVR application that includes unit tests is available here](https://github.com/marcelog/Pagi-App-And-Test-Example)
- * [Professional Telephony Applications at hand](http://sdjournal.org/a-practical-introduction-to-functional-programming-with-php-sdj-issue-released/) The march edition of [Software Developer Journal](http://sdjournal.org/) features a complete article about writing telephony applications with PAMI and PAGI.
-
 # Installing
 Add this library to your [Composer](https://packagist.org/) configuration. In
 composer.json:
@@ -31,14 +13,6 @@ composer.json:
   "require": {
     "marcelog/pagi": "2.*"
   }
-```
-
-# Using it
-
-First, make sure you include the [autoloader shipped with composer](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
-
-```php
-require __DIR__ . '/vendor/autoload.php';
 ```
 
 # Quickstart
@@ -57,8 +31,6 @@ A mocked pagi client is included to easily test your ivr applications. See
 # Features
 
 ## Nodes
-
-For a tutorial about nodes, see [this article](http://marcelog.github.com/articles/pagi_node_call_flow_easy_telephony_application_for_asterisk_php.html)
 
 Simple Call Flow Nodes are available (see **doc/examples/node/example.php**). Using
 nodes will let you simplify how you build and test your ivr applications. Nodes
@@ -82,8 +54,6 @@ The NodeController will let you control the call flow of your application, by
 registering nodes and actions based on node results. Thus, you can jump from
 one node to the other on cancel or complete inputs, hangup the call, execute a
 callback, etc. For an example, see doc/examples/nodecontroller/example.php
-
-An article about the node controller is available [here](http://marcelog.github.com/articles/making_your_ivr_nodes_call_flow_with_pagi_and_php_asterisk.html)
 
 ## AutoDial
 
@@ -128,35 +98,10 @@ $pagi->setLogger($logger);
 
 By default, the client will use the [NullLogger](http://www.php-fig.org/psr/psr-3/#1-4-helper-classes-and-interfaces).
 
-# Developers
-This project uses [phing](https://www.phing.info/). Current tasks include:
- * test: Runs [PHPUnit](https://phpunit.de/).
- * cs: Runs [CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
- * doc: Runs [PhpDocumentor](http://www.phpdoc.org/).
- * md: runs [PHPMD](http://phpmd.org/).
- * build: This is the default task, and will run all the other tasks.
-
-## Running a phing task
-To run a task, just do:
-
-```sh
-vendor/bin/phing build
-```
-
-## Contributing
-To contribute:
- * Make sure you open a **concise** and **short** pull request.
- * Throw in any needed unit tests to accomodate the new code or the
- changes involved.
- * Run `phing` and make sure everything is ok before submitting the pull
- request (make phpmd and CodeSniffer happy, also make sure that phpDocumentor
- does not throw any warnings, since all our documentation is automatically
- generated).
- * Your code must comply with [PSR-2](http://www.php-fig.org/psr/psr-2/),
- CodeSniffer should take care of that.
 
 LICENSE
 =======
+Copyright 2026 Siddharth Upmanyu <siddharth@kstych.com>
 Copyright 2011 Marcelo Gornstein <marcelog@gmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
